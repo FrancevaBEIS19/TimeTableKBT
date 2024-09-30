@@ -1,11 +1,11 @@
 FROM python:3.9
 
-WORKDIR /app
+WORKDIR /timetablekbt
 
-COPY requirements.txt /app/requirements.txt
+COPY requirements.txt /timetablekbt/requirements.txt
 
-RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /timetablekbt/requirements.txt
 
-COPY . /app
+COPY . /timetablekbt
 
 CMD ["python", "main.py"]
